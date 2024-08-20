@@ -1,0 +1,142 @@
+/* styles.css */
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #8e9eab, #eef2f3);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+header {
+    background: #6a89cc;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+main {
+    padding: 30px;
+}
+
+#startStopBtn {
+    background: #38ada9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#startStopBtn:hover {
+    background: #079992;
+}
+
+#transcript {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border: 2px solid #6a89cc;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+    resize: none;
+}
+
+footer {
+    background: #6a89cc;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+button:focus, textarea:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 768px) {
+    #transcript {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        font-size: 20px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    #startStopBtn {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* Unique and grand styling beyond basic needs */
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') no-repeat center center/cover;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.container {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+main button {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+footer p {
+    font-style: italic;
+}
